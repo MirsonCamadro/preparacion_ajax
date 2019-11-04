@@ -1,0 +1,8 @@
+<% @companies.each do |company| %>
+<tr id="company_<%= company.id %>">
+	<td><%= company.name %></td>
+	<td><%= link_to 'Eliminar', company, method: :delete, data: { remote: true }%></td>
+	<td><%= link_to "Editar", edit_company_path(company), data: { remote: true }%></td>
+	<td><%= link_to "Show", company, data: { remote: true }%></td>
+</tr>
+<% end %>

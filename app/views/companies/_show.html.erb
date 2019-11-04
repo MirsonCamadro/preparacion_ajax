@@ -1,0 +1,20 @@
+<%= @company.name %>
+
+<%= form_with(model: [@company, Complaint.new]) do |f| %>
+<%= f.label :detail%>
+<%= f.text_area :detail%>
+<%= f.submit 'comentar'%>
+<% end %>
+
+
+<% @complaints.each do |complaint| %>
+    <% if (@company.id == complaint.company_id)%>
+    <div id="cc">
+        <%= complaint.detail%>
+    </div>
+    <% end %>
+<% end %>
+
+
+
+

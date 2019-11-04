@@ -1,0 +1,5 @@
+<%= form_with(model: company) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+    <%= f.submit "Añadir empresa", class: "btn btn-info"%>
+<% end %>
